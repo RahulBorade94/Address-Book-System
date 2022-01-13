@@ -1,4 +1,42 @@
 package com.bridgelabz.addressbook;
 
+import java.util.Scanner;
+
 public class AddressBook {
+    //scanner object input purposr
+    Scanner sc =new Scanner(System.in);
+    Contact contact =new Contact();
+
+    public void addMethod()
+    {
+        System.out.println("Address Book Details:");
+        System.out.println("Enter First Name");
+        contact.setFirstName(sc.next());
+        System.out.println("Enter Last Name");
+        contact.setLastname(sc.next());
+        System.out.println("Enter the Address :");
+        contact.setAddress(sc.next());
+        System.out.println("Enter the City :");
+        contact.setCity(sc.next());
+        System.out.println("Enter the State :");
+        contact.setState(sc.next());
+        System.out.println("Enter the Zip Code :");
+        contact.setZip(sc.next());
+        System.out.println("Enter the Phone Number :");
+        contact.setPhoneNo(sc.next());
+        System.out.println("Enter the EMail ID :");
+        contact.setEmailID(sc.next());
+    }
+    public void showContact(){
+        System.out.println("Contact Details -");
+        System.out.println("First Name : "+contact.getFirstName());
+        System.out.println("Last Name : "+contact.getLastname());
+        System.out.println("Address : "+contact.getAddress());
+        System.out.println("City : "+contact.getCity());
+        System.out.println("State : "+contact.getState());
+        System.out.println("Zip Code : "+contact.getZip());
+        System.out.println("Phone Number : "+contact.getPhoneNo());
+        System.out.println("EMail ID : "+contact.getEmailID());
+    }
 }
+
