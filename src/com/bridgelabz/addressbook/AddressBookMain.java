@@ -11,13 +11,14 @@ public class AddressBookMain {
         AddressBook addressBook =new AddressBook();
         do {
             System.out.println("Address Book System");
-            System.out.println("1. Add New Contact\n2. Show Contact\n3. Edit Contact \n4. Exit");
+            System.out.println("1. Add New Contact\n2. Show Contact\n3. Edit Contact" +
+                    "\n4. Delete Contact\n5. Exit");
             System.out.println("Select Any Number: ");
             choice = addressBook.sc.nextInt();
 
             switch (choice) {
                 case 1:
-                    addressBook.addMethod();
+                    addressBook.addContact();
                     break;
                 case 2:
                     addressBook.showContact();
@@ -26,13 +27,16 @@ public class AddressBookMain {
                     addressBook.editContact();
                     break;
                 case 4:
+                    addressBook.deleteContact();
+                    break;
+                case 5:
                     System.out.println("Address Book.");
                     break;
                 default:
-                    System.out.println(" Select the Number between 1 to 4");
+                    System.out.println(" Select the Number between 1 to 5");
                     break;
             }
-        }while( choice != 4 );
+        }while( choice != 5 );
 
     }
     }
